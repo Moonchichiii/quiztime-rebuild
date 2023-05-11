@@ -57,6 +57,9 @@ h1  {
 
 p {
     font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin: auto;
+    line-height: 1.8;
 }   
 
 /* main layout  */ 
@@ -75,7 +78,13 @@ main {
     display: flex;
     width: 100%;
     height: auto;
-
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: 2%;
+    margin-bottom: 1%;
 }
 
 
@@ -87,13 +96,33 @@ footer {
     background-color: var(--footer-bkg-color);
 }
 
-/* game layout  */ 
-
-
-
-
 
 /* main game container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% auto;
+    width: 70vw;
+    max-width: 70%;
+}
+
+
+#question {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: justify;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.controlls {
+    margin-top: 2%;
+}
 
 
 
