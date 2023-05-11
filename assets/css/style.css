@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
+
+
+/* global styles */
+
+
 *,*::before, *::after {
     box-sizing:border-box;
     
@@ -41,3 +46,48 @@ body {
     background:var(--background-color);
 }
 
+/* main layout  */ 
+
+header {
+    display: flex;
+    justify-content: center;
+    
+}
+
+main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+footer {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--footer-bkg-color);
+}
+
+
+/* footer social icons */
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 2%;
+}
+
+i {
+    font-size:1.5rem;
+    color:var(--social-link-colors)
+}
+
+i:hover {
+    transition: 200ms;
+    transform: scale(1.2);
+    color:var(--social-hover-colors);
+}
