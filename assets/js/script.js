@@ -20,9 +20,18 @@ function Login() {
 
   // Local time of the users
 
-  setInterval(() => {
+  setInterval(function() {
     document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  },  1000);
 
+// Start button (start quiz)
 
-    
 
+const startButton = document.getElementById("start-btn");
+startButton.addEventListener('click', startQuiz);
+
+
+console.log(startButton);
+
+function startQuiz() {
+
+}
