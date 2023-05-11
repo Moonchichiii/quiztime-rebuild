@@ -58,3 +58,11 @@ h1  {
 p {
     font-family: 'Playfair Display', serif;
 }   
+
+
+
+/* componentes */
+
+.hide {
+    display: none;
+ }
