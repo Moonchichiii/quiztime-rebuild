@@ -21,6 +21,8 @@ function Login() {
   // Local time of the users
 
   setInterval(() => {
-    document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  }  1000);
+    document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  },  1000);
+
 
     
+
