@@ -30,8 +30,12 @@ const startButton = document.getElementById("start-btn");
 startButton.addEventListener('click', startQuiz);
 
 
-console.log(startButton);
+
 
 function startQuiz() {
+  var gameInstructions = document.getElementById("instructions");
+  gameInstructions.classList.add("hide");
 
+  var questionContainer = document.getElementById("question-container");  
+  startButton.classList.add("hide");
 }
