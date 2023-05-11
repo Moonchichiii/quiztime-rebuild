@@ -59,6 +59,44 @@ p {
     font-family: 'Playfair Display', serif;
 }   
 
+/* main layout  */ 
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    top:0;
+    background-color: var(--footer-bkg-color);
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: auto;
+
+}
+
+
+footer {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--footer-bkg-color);
+}
+
+/* game layout  */ 
+
+
+
+
+
+/* main game container */
+
+
+
 
 
 /* componentes */
