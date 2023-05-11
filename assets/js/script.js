@@ -25,7 +25,6 @@ function Login() {
 
 // Start button (start quiz)
 
-/* jshint esversion: 6 */
 
 const startButton = document.getElementById("start-btn");
 startButton.addEventListener('click', startQuiz);
