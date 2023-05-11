@@ -1,17 +1,18 @@
 // login // username display
 
-function Login(){
+function Login() {
     var gameNameInput = document.getElementById("username");
     var username = gameNameInput.value;
 
     if (!username) {
-        alert("Please Choose a username");
-        return;
+      alert("Please choose a username!");
+      return;
     }
 
     window.localStorage.setItem("username", username);
     window.location.href = "quiz.html";
-}
+  }
 
-var username = window.localStorage.getItem("username");
-document.getElementById("username-displayed").textContent = username;
+
+  var username = window.localStorage.getItem("username");
+  document.getElementById("username-displayed").textContent = username;
