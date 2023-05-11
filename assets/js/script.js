@@ -16,3 +16,11 @@ function Login() {
 
   var username = window.localStorage.getItem("username");
   document.getElementById("username-displayed").textContent = username;
+
+
+  // Local time of the users
+
+  setInterval(() => {
+    document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  }  1000);
+
+    
