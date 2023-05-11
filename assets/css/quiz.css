@@ -1,3 +1,60 @@
-body {
-    color:black;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+
+/* global styles */
+
+
+*,*::before, *::after {
+    box-sizing:border-box;
+    
 }
+:root {
+    /*Background colors*/
+    --background-color:linear-gradient(
+        to right,
+        #fdc830,
+        #f37335);
+    --footer-bkg-color:rgba(255,255,255,0.3);
+    /*Headings and Text*/
+    --headings-color:#F92C85;
+    --text-color:#A0AECD;
+    
+    /* Buttons */
+    --signin-button:#FECD45;
+    --button-color:#5EBEC4;
+    /* Links colors */
+    --social-link-colors:white;
+    --social-hover-colors:#F92C85;
+    
+    /*Display colors*/
+    --correct-answer:#ABF62D;
+    --incorrect-answer:#EA445A;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
+    background:var(--background-color);
+}
+
+
+/* typograph */
+
+h1  {
+    font-size:4.5rem;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+p {
+    font-family: 'Playfair Display', serif;
+}   
