@@ -16,8 +16,7 @@
 
         
 <main>
-    
-    
+        
     <div id="display-score">
 
         <div id="showplayer">
@@ -25,20 +24,20 @@
               <span id="username-displayed"></span>
             </p>
         </div>      
-        <p>Correct Answers:<div id="correct" class="correct"></div></p>
-        <p>incorrect Answers:<div id="incorrect" class="incorrect"></div></p>
+        <p>Correct Answers:</p><div id="correct" class="correct"></div>
+        <p>incorrect Answers:</p><div id="incorrect" class="incorrect"></div>
 
     </div>
+</div>
+<button onclick="restart()" id="restart">Restart the quiz?</button>
+<button onclick="sigin()" id="re-sigin-in">Return to sigin-in page?</button>
+
+
+</div>           
 
 </main>
 
-    </div>
-        <a href="quiz.html"><button class="btn">Restart the quiz?</button></a>
-        <a href="index.html"><button class="btn">Return to sigin-in page?</button></a>
-
-
-    </div>           
-    
+   
 
 
 
@@ -68,6 +67,15 @@
       document.getElementById('correct').innerText = correctScore;
       document.getElementById('incorrect').innerText = incorrectScore;
     };
+
+    function restart() {
+        window.location.href = "quiz.html";
+    }
+
+    function sigin() {
+        window.location.href = "index.html";
+    }
+
     </script>
 <script src="assets/js/script.js"></script>
 <script src="https://kit.fontawesome.com/97d1638932.js" crossorigin="anonymous"></script>
