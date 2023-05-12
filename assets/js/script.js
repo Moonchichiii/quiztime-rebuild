@@ -1,21 +1,21 @@
-// login // username display
+// login // username displayed // 
 
 function Login() {
     var gameNameInput = document.getElementById("username");
-    var username = gameNameInput.value;
+    var playerUsername = gameNameInput.value;
 
-    if (!username) {
-      alert("Please choose a username!");
+    if (!playerUsername) {
+      alert("Please choose a username to play!");
       return;
     }
 
-    window.localStorage.setItem("username", username);
+    window.localStorage.setItem("username", playerUsername);
     window.location.href = "quiz.html";
   }
 
 
-  var username = window.localStorage.getItem("username");
-  document.getElementById("username-displayed").textContent = username;
+  var playerUsername = window.localStorage.getItem("username");
+  document.getElementById("username-displayed").textContent = playerUsername;
 
 
   // Local time of the users
@@ -24,81 +24,7 @@ function Login() {
     document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  },  1000);
 
 // Start button (start quiz)
-
-
-const startButton = document.getElementById("start-btn");
-startButton.addEventListener('click', startQuiz);
-
-const questionElement = document.getElementById("questions");
-const nextButton = document.getElementById("next-btn");
-nextButton.addEventListener('click', nextQuestion);
-
-let shuffleQuestion, currentQuestionIndex;
-
-const answerButtonElement = document.getElementById("answer-buttons"); 
-
-
-
-
-
-
-
-function startQuiz() {  
-  var gameInstructions = document.getElementById("instructions");
-  gameInstructions.classList.add("hide");
-
-  var questionContainer = document.getElementById("question-container");  
-  startButton.classList.add("hide");
-  
-  
-  
-  questionContainer.classList.remove("hide");
-
-  var scoreBoard = document.getElementById("scoreboard");
-  scoreBoard.classList.remove("hide");
-
-  nextButton.classList.remove("hide");
-
-  shuffleQuestion = questions.sort(() => Math.random() - 0.5)
-  currentQuestionIndex = 0;
-  showQuestion(shuffleQuestion[currentQuestionIndex]);
-}
-
-function nextQuestion() {
-  resetState();
-  currentQuestionIndex++;
-  if (currentQuestionIndex < shuffleQuestion.length) {
-    showQuestion(shuffleQuestion[currentQuestionIndex]);
-  } else {
-    endQuiz();
-  }
-}
-
-function showQuestion(question) {
-  questionElement.innerText = question.question;
-  question.answers.forEach(answer => {
-
-  const button = document.createElement('button');
-  button.innerText = answer.text;
-  button.classList.add('btn'); 
-
-    if (answer.correct) {
-      button.dataset.correct = answer.correct;
-    }
-    button.addEventListener('click', selectAnswer);
-    answerButtonElement.appendChild(button);
-
-    nextButton.disabled = false;
-    
-  });
-}
-
-
-
-
-
-
-
+/*
 const questions = [
   {
     question: 'In which city is the famous Edvard Eriksen statue, The Little Mermaid?',
@@ -182,4 +108,4 @@ const questions = [
     ]
   },
 
-];
+];*/
