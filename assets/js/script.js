@@ -1,5 +1,5 @@
-// login // username displayed // 
 
+// function to "onclick" inside the index.html
 function Login() {
     var gameNameInput = document.getElementById("username");
     var playerUsername = gameNameInput.value;
@@ -19,7 +19,7 @@ function Login() {
 
 
 
-
+// displaying the local time for the user. 
 setInterval(function() {
 document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  },  1000);
 
@@ -27,25 +27,25 @@ document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  },
 
 // start button (startQuiz) 
 
-const startButton = document.getElementById("start-btn");
+var startButton = document.getElementById("start-btn");
 startButton.addEventListener('click', startQuiz);
 
 
 // next button,skip questions inside the quiz. 
 
 
-const questionElement = document.getElementById("questions");
-const nextButton = document.getElementById("next-btn");
+var questionElement = document.getElementById("questions");
+var nextButton = document.getElementById("next-btn");
 nextButton.addEventListener('click', nextQuestion);
 
 // random question and currentquestion. 
 
-let shuffleQuestion, currentQuestionIndex;
+var shuffleQuestion, currentQuestionIndex;
 
 
 // answer-buttons.
 
-const answerButtonElement = document.getElementById("answer-buttons"); 
+var answerButtonElement = document.getElementById("answer-buttons"); 
 
 
 
@@ -53,21 +53,64 @@ const answerButtonElement = document.getElementById("answer-buttons");
 
 function startQuiz() {  
   
+  // removing the quiz instructions 
   var gameInstructions = document.getElementById("instructions");
   gameInstructions.classList.add("hide");
+  
+
+  // removing the startbutton 
   startButton.classList.add("hide");  
 
 
+  // displaying the question container
+  var questionContainer = document.getElementById("question-container");
+  questionContainer.classList.remove("hide");
+
+  
+
+  // displaying the scoreboard. 
+  var scoreBoard = document.getElementById("scoreboard");
+  scoreBoard.classList.remove("hide");
+
+  // displaying the nextbutton
   nextButton.classList.remove("hide");
+  questionContainer.classList.remove("hide");
 
-  shuffleQuestion = questions.sort(() => Math.random() -0.5)
-  currentQuestionIndex = 0;
 
+  // displaying the first question from the shuffled list
+	shuffleQuestion = questions.sort(function() {
+  return Math.random() - 0.5;
+
+  });
+
+	currentQuestionIndex = 0;
+	showQuestion(shuffleQuestion[currentQuestionIndex]);
+
+}
+
+
+/*
+
+
+
+function nextQuestion()
+currentQuestionIndex++;
+if(currentQuestionIndex < shuffleQuestion.length) {
+  showQuestion(shuffleQuestion[currentQuestionIndex]);
+  else {
+    endQuiz()
+  }
 
 };
 
 
+function showQuestion(question){}
 
+
+function resetState(){}
+
+
+function endQuiz(){}
 
 
 
