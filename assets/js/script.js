@@ -28,12 +28,22 @@ document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  },
 
 
 const startButton = document.getElementById("start-btn");
-
-
 startButton.addEventListener('click', startQuiz);
+
+
+const questionElement = document.getElementById("questions");
+const nextButton = document.getElementById("next-btn");
+nextButton.addEventListener('click', nextQuestion);
+
+let shuffleQuestion, currentQuestionIndex;
+
+const answerButtonElement = document.getElementById("answer-buttons"); 
+
 
 function startQuiz() {  
   startButton.classList.add("hide");  
+
+
   var gameInstructions = document.getElementById("instructions");
   gameInstructions.classList.add("hide");
 
