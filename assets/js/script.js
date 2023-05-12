@@ -25,27 +25,44 @@ document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  },
 
 
 
-
+// start button (startQuiz) 
 
 const startButton = document.getElementById("start-btn");
 startButton.addEventListener('click', startQuiz);
+
+
+// next button,skip questions inside the quiz. 
 
 
 const questionElement = document.getElementById("questions");
 const nextButton = document.getElementById("next-btn");
 nextButton.addEventListener('click', nextQuestion);
 
+// random question and currentquestion. 
+
 let shuffleQuestion, currentQuestionIndex;
+
+
+// answer-buttons.
 
 const answerButtonElement = document.getElementById("answer-buttons"); 
 
 
+
+
+
 function startQuiz() {  
+  
+  var gameInstructions = document.getElementById("instructions");
+  gameInstructions.classList.add("hide");
   startButton.classList.add("hide");  
 
 
-  var gameInstructions = document.getElementById("instructions");
-  gameInstructions.classList.add("hide");
+  nextButton.classList.remove("hide");
+
+  shuffleQuestion = questions.sort(() => Math.random() -0.5)
+  currentQuestionIndex = 0;
+
 
 };
 
@@ -53,7 +70,7 @@ function startQuiz() {
 
 
 
-/*
+
 
 const questions = [
   {
@@ -138,4 +155,4 @@ const questions = [
     ]
   },
 
-];*/
+];
