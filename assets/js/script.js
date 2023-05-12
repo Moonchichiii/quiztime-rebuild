@@ -88,8 +88,8 @@ function startQuiz() {
 
 }
 
-/*
 
+/*
 
 
 
@@ -101,7 +101,7 @@ if(currentQuestionIndex < shuffleQuestion.length) {
     endQuiz();
   }
 
-}
+}*/
 
 
 function showQuestion(question){
@@ -120,12 +120,12 @@ function showQuestion(question){
     }
     button.addEventListener('click', selectAnswer);
     answerButtonElement.appendChild(button);
-    // once the answer is clicked the next button is disabled. 
+    
     nextButton.disabled = false;
 
     });
 }
-/*
+
 function resetState() {
   while (answerButtonElement.firstChild){
     answerButtonElement.removeChild(answerButtonElement.firstChild);
@@ -152,8 +152,15 @@ function selectAnswer(addEventListener) {
       correctScoreElement.style.color = ""; 
     }, 2000);
   }
-
+  correctScore++;
+  correctScoreElement.style.color = "green";
+  
+  // the color will stay for 2 seconds. 
+  setTimeout(function() {
+    correctScoreElement.style.color = ""; 
+  }, 2000);
 }
+}/*
 
 
 function resetState(){}
@@ -161,7 +168,7 @@ function resetState(){}
 
 function endQuiz(){}
 
-
+*/
 
 
 const questions = [
@@ -247,4 +254,4 @@ const questions = [
     ]
   },
 
-];*/
+];
