@@ -131,6 +131,32 @@ footer {
 
 /* componentes */
 
+button {
+    border:none;
+    background-color:var(--signin-button);
+    border-radius: 15px;
+    padding: 5px;    
+}
+
+button:hover {
+    color: white;
+    background-color: var(--headings-color);
+}
+
+.start-btn {
+    border:none;
+    background-color:var(--signin-button);
+    border-radius: 15px;
+    padding: 5px; 
+    font-size: 1.4rem;   
+}
+
+.start-btn:hover {
+    color: white;
+    background-color: var(--headings-color);
+}
+
+
 .hide {
     display: none;
  }
