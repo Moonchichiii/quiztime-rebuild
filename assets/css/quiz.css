@@ -130,7 +130,7 @@ footer {
 
 
 /* componentes */
-/*
+
 button {
     border:none;
     background-color:var(--signin-button);
@@ -141,7 +141,7 @@ button {
 button:hover {
     color: white;
     background-color: var(--headings-color);
-}*/
+}
 
 .start-btn {
     border:none;
