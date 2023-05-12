@@ -142,7 +142,7 @@ footer {
     font-size:1.5rem;
 }
 
-#intro  {
+#instructions  {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -224,11 +224,17 @@ i:hover {
 }
 
 @media screen and (min-width:653px) and (max-height:280px) {
-    h1  {
-        font-size:2rem;
-        font-family: 'Playfair Display', serif;
+#instructions  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-    }
+        font-size: 0.8rem;
+        font-weight: 800;
+                
+        
+    }    
     .social {
         display: flex;
         align-items: center;

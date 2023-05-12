@@ -27,31 +27,33 @@ function Login() {
 
 // Start button (start quiz)
 
-
 const startButton = document.getElementById("start-btn");
 startButton.addEventListener('click', startQuiz);
 
+const questionElement = document.getElementById("questions");
 
-// main function to start and hide the intstructions and start button. 
+const nextButton = document.getElementById("next-btn");
+nextButton.addEventListener('click', nextQuestion);
+
+let shuffleQuestion, currentQuestionIndex;
+
+const answerButtonElement = document.getElementById("answer-buttons"); 
 
 
 
 
+function startQuiz() {  
 
-function startQuiz() {
-  
-  var gameInstructions = document.getElementById("intro");
+  var gameInstructions = document.getElementById("instructions");
   gameInstructions.classList.add("hide");
 
+  var questionContainer = document.getElementById("question-container");  
   startButton.classList.add("hide");
+
+  questionContainer.classList.remove("hide");
+
+  
 }
-
-
-
-
-
-
-
 
 
 
