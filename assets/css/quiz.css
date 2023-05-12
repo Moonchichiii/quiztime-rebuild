@@ -76,12 +76,16 @@ header {
 
 main {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    width: 80%;
     height: auto;    
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
     margin-bottom: 3%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align-last: center;
 }
 
 
@@ -172,8 +176,22 @@ i:hover {
 
 /* @ media */
 @media screen and (min-width:280px) and (max-width:678px) {
+    
+    main {
 
-          
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;    
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: center;
+        padding:1em;
+        margin-bottom: 3%;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-align-last: center;
+    }
     #showplayer {
         font-size:1.2rem;
         font-weight: 500;
