@@ -24,6 +24,27 @@ function Login() {
     document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  },  1000);
 
 // Start button (start quiz)
+
+
+
+
+const startButton = document.getElementById("start-btn");
+startButton.addEventListener('click', startQuiz);
+
+
+function startQuiz() {
+  console.log(startQuiz);
+}
+
+
+
+
+
+
+
+
+
+
 /*
 const questions = [
   {

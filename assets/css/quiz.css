@@ -77,17 +77,11 @@ header {
 main {
     display: flex;
     width: 100%;
-    height: auto;
-    
+    height: auto;    
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-top: 2%;
-    margin-bottom: 1%;
-    
+    margin-bottom: 3%;
 }
 
 
@@ -148,12 +142,15 @@ footer {
     font-size:1.5rem;
 }
 
-
-
-
-
-
-
+#instructions  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
 
 /* footer social icons */
 
@@ -184,26 +181,44 @@ i:hover {
 
 /* @ media */
 @media screen and (min-width:280px) and (max-width:678px) {
-    h1  {
-        font-size:4rem;
-        font-family: 'Playfair Display', serif;
-        text-align: center;
-    }
 
-    p {
+    #instructions  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 800;
+                
+        
+    }
+        
+    #showplayer {
+        font-size:1.2rem;
+        font-weight: 500;
+        margin-top: 2%;
+        margin-left:2%;
+    }  
+    .time {    
+        margin-top: 1%;
+        margin-right: 2%;
+        font-size:1.5rem;
+    }
+    #questions {
         font-family: 'Playfair Display', serif;
         text-align: center;
-        margin: auto;
-        line-height: 1.2;
-        font-weight: 800;
+        margin-right: auto;
+        margin-left: auto;
+        line-height: 0.9;
+        font-weight: 600;
         font-size: 1.2rem;
-    }   
+    } */  
     .social {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 4%;
-        margin-top: 4%;
+        margin-top:4%;
      
     }
 }
