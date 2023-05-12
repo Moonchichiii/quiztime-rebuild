@@ -1,21 +1,21 @@
 
 // function to "onclick" inside the index.html
 function Login() {
-    var gameNameInput = document.getElementById("username");
-    var playerUsername = gameNameInput.value;
+  var gameNameInput = document.getElementById("username");
+  var playerUsername = gameNameInput.value;
 
-    if (!playerUsername) {
-      alert("Please choose a username to play!");
-      return;
-    }
-
-    window.localStorage.setItem("username", playerUsername);
-    window.location.href = "quiz.html";
+  if (!playerUsername) {
+    alert("Please choose a username to play!");
+    return;
   }
 
+  window.localStorage.setItem("username", playerUsername);
+  window.location.href = "quiz.html";
+}
 
-  var playerUsername = window.localStorage.getItem("username");
-  document.getElementById("username-displayed").textContent = playerUsername;
+
+var playerUsername = window.localStorage.getItem("username");
+document.getElementById("username-displayed").textContent = playerUsername;
 
 
 
@@ -52,39 +52,39 @@ var answerButtonElement = document.getElementById("answer-buttons");
 
 
 function startQuiz() {  
-  
-  // removing the quiz instructions 
-  var gameInstructions = document.getElementById("instructions");
-  gameInstructions.classList.add("hide");
-  
 
-  // removing the startbutton 
-  startButton.classList.add("hide");  
+// removing the quiz instructions 
+var gameInstructions = document.getElementById("instructions");
+gameInstructions.classList.add("hide");
 
 
-  // displaying the question container
-  var questionContainer = document.getElementById("question-container");
-  questionContainer.classList.remove("hide");
-
-  
-
-  // displaying the scoreboard. 
-  var scoreBoard = document.getElementById("scoreboard");
-  scoreBoard.classList.remove("hide");
-
-  // displaying the nextbutton
-  nextButton.classList.remove("hide");
-  questionContainer.classList.remove("hide");
+// removing the startbutton 
+startButton.classList.add("hide");  
 
 
-  // displaying the first question from the shuffled list
-	shuffleQuestion = questions.sort(function() {
-  return Math.random() - 0.5;
+// displaying the question container
+var questionContainer = document.getElementById("question-container");
+questionContainer.classList.remove("hide");
 
-  });
-  
-	currentQuestionIndex = 0;
-	showQuestion(shuffleQuestion[currentQuestionIndex]);
+
+
+// displaying the scoreboard. 
+var scoreBoard = document.getElementById("scoreboard");
+scoreBoard.classList.remove("hide");
+
+// displaying the nextbutton
+nextButton.classList.remove("hide");
+questionContainer.classList.remove("hide");
+
+
+// displaying the first question from the shuffled list
+shuffleQuestion = questions.sort(function() {
+return Math.random() - 0.5;
+
+});
+
+currentQuestionIndex = 0;
+showQuestion(shuffleQuestion[currentQuestionIndex]);
 
 }
 
@@ -96,62 +96,61 @@ function startQuiz() {
 function nextQuestion()
 currentQuestionIndex++;
 if(currentQuestionIndex < shuffleQuestion.length) {
-  showQuestion(shuffleQuestion[currentQuestionIndex]);
-  else {
-    endQuiz();
-  }
+showQuestion(shuffleQuestion[currentQuestionIndex]);
+else {
+  endQuiz();
+}
 
 }*/
 
 
-function showQuestion(question){
+
   // displays the questions 
+function showQuestion(question) {
   questionElement.innerText = question.question;
-  question.answers.array.forEach(element => {
+  question.answers.forEach(function(answer) {
 
-    // creates the buttons and adds the answers to the button. 
-    var button = document.createElement('button');
-    button.innerText = answer.text;
-    button.classList.add('btn')
-    
-    // if correct answer is clicked. 
-    if (answer.correct) {
-      button.dataset.correct = answer.correct;
-    }
-    button.addEventListener('click', selectAnswer);
-    answerButtonElement.appendChild(button);
-    
-    nextButton.disabled = false;
-
-    });
-}
-
-function resetState() {
-  while (answerButtonElement.firstChild){
-    answerButtonElement.removeChild(answerButtonElement.firstChild);
+  // creates the buttons and adds the answers to the button. 
+  var button = document.createElement('button');
+  button.innerText = answer.text;
+  button.classList.add('btn');
+  
+  // if correct answer is clicked. 
+  if (answer.correct) {
+    button.dataset.correct = answer.correct;
   }
+  button.addEventListener('click', selectAnswer);
+  answerButtonElement.appendChild(button);
+  
+  nextButton.disabled = false;
+
+  });
 }
 
-let correctScore = 0;
-let incorrectScore = 0;
+// clearing the answerbuttonElement. 
+function resetState() {
+while (answerButtonElement.firstChild){
+  answerButtonElement.removeChild(answerButtonElement.firstChild);
+}
+}
+
+var correctScore = 0;
+var incorrectScore = 0;
+
 
 function selectAnswer(addEventListener) {
+
   var selctedButton = addEventListener.taget;
+
   var correct = selctedButton.dataset.correct;
+
   var correctScoreElement = getElementById("correct");
+
   var incorrectScoreElement = getElementById("incorrect");
 
-  // if the answer is correct the number will turn green.
+// if the answer is correct the number will turn green.
 
-  if (correct) {
-    correctScore++;
-    correctScoreElement.style.color = "green";
-    
-    // the color will stay for 2 seconds. 
-    setTimeout(function() {
-      correctScoreElement.style.color = ""; 
-    }, 2000);
-  }
+if (correct) {
   correctScore++;
   correctScoreElement.style.color = "green";
   
@@ -160,15 +159,35 @@ function selectAnswer(addEventListener) {
     correctScoreElement.style.color = ""; 
   }, 2000);
 }
-}/*
+incorrectScore++;
+incorrectScoreElement.style.color = "red";
+
+// the color will stay for 2 seconds. 
+setTimeout(function() {
+  incorrectScoreElement.style.color = ""; 
+}, 2000);
+
+}
+
+nextButton.disabled = true;
+
+correctScoreElement.innerText = correctScore;
+incorrectScoreElement.innerText = incorrectScore;
+
+setTimeout(nextQuestion, 1500);
+
+
+function endQuiz(){
+    localStorage.setItem('correctScore', correctScore);
+    localStorage.setItem('incorrectScore', incorrectScore);
+    window.location.href = "finished.html";
+}
 
 
 function resetState(){}
 
 
 function endQuiz(){}
-
-*/
 
 
 const questions = [
