@@ -142,15 +142,6 @@ footer {
     font-size:1.5rem;
 }
 
-#instructions  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    
-}
 
 /* footer social icons */
 
@@ -182,18 +173,7 @@ i:hover {
 /* @ media */
 @media screen and (min-width:280px) and (max-width:678px) {
 
-    #instructions  {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 0.8rem;
-        font-weight: 800;
-                
-        
-    }
-        
+          
     #showplayer {
         font-size:1.2rem;
         font-weight: 500;
@@ -213,7 +193,7 @@ i:hover {
         line-height: 0.9;
         font-weight: 600;
         font-size: 1.2rem;
-    } */  
+    }   
     .social {
         display: flex;
         align-items: center;
@@ -224,17 +204,8 @@ i:hover {
 }
 
 @media screen and (min-width:653px) and (max-height:280px) {
-#instructions  {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 0.8rem;
-        font-weight: 800;
-                
-        
-    }    
+
+       
     .social {
         display: flex;
         align-items: center;

@@ -18,46 +18,33 @@ function Login() {
   document.getElementById("username-displayed").textContent = playerUsername;
 
 
-  // Local time of the users
-
-  setInterval(function() {
-    document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  },  1000);
 
 
+setInterval(function() {
+document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  },  1000);
 
-// Start button (start quiz)
+
+
+
 
 const startButton = document.getElementById("start-btn");
+
+
 startButton.addEventListener('click', startQuiz);
 
-const questionElement = document.getElementById("questions");
-
-const nextButton = document.getElementById("next-btn");
-nextButton.addEventListener('click', nextQuestion);
-
-let shuffleQuestion, currentQuestionIndex;
-
-const answerButtonElement = document.getElementById("answer-buttons"); 
-
-
-
-
 function startQuiz() {  
-
+  startButton.classList.add("hide");  
   var gameInstructions = document.getElementById("instructions");
   gameInstructions.classList.add("hide");
 
-  var questionContainer = document.getElementById("question-container");  
-  startButton.classList.add("hide");
+};
 
-  questionContainer.classList.remove("hide");
 
-  
-}
 
 
 
 /*
+
 const questions = [
   {
     question: 'In which city is the famous Edvard Eriksen statue, The Little Mermaid?',
