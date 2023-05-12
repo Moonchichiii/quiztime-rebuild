@@ -101,6 +101,7 @@ footer {
 /* main game container */
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 2% auto;
@@ -109,23 +110,44 @@ footer {
 }
 
 
-#question {
+
+
+/* Quiz componentes */
+
+.question-display {
     display: flex;
     justify-content: center;
     margin-bottom: 2%;
     align-items: center;
     margin-right: auto;
     margin-left: auto;
-    text-align: justify;
-    font-size: 1.8rem;
+    text-align: center;
+    font-size: 1.5rem;
     font-weight: 700;
+}
+
+
+.anw-buttons {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    gap: 2%;
 }
 
 .controlls {
     margin-top: 2%;
 }
 
+.score {
+    font-size:1.1rem;
+    font-weight: 600;
+}
 
+.score-number {
+    margin-left: 2%;
+    font-size:1.4rem;
+    font-weight: 700;
+}
 
 
 
@@ -218,6 +240,43 @@ i:hover {
         font-weight: 600;
         text-align-last: center;
     }
+    /* Quiz componentes */
+
+.question-display {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.anw-buttons {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    gap: 2%;
+}
+
+.controlls {
+    margin-top: 2%;
+}
+
+.score {
+    font-size:1.1rem;
+    font-weight: 600;
+}
+
+.score-number {
+    margin-left: 2%;
+    font-size:1.4rem;
+    font-weight: 700;
+}
+
     #showplayer {
         font-size:1.2rem;
         font-weight: 500;
