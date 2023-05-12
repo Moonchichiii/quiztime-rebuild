@@ -82,14 +82,14 @@ function startQuiz() {
   return Math.random() - 0.5;
 
   });
-
+  
 	currentQuestionIndex = 0;
 	showQuestion(shuffleQuestion[currentQuestionIndex]);
 
 }
 
-
 /*
+
 
 
 
@@ -98,13 +98,62 @@ currentQuestionIndex++;
 if(currentQuestionIndex < shuffleQuestion.length) {
   showQuestion(shuffleQuestion[currentQuestionIndex]);
   else {
-    endQuiz()
+    endQuiz();
   }
 
-};
+}
 
 
-function showQuestion(question){}
+function showQuestion(question){
+  // displays the questions 
+  questionElement.innerText = question.question;
+  question.answers.array.forEach(element => {
+
+    // creates the buttons and adds the answers to the button. 
+    var button = document.createElement('button');
+    button.innerText = answer.text;
+    button.classList.add('btn')
+    
+    // if correct answer is clicked. 
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener('click', selectAnswer);
+    answerButtonElement.appendChild(button);
+    // once the answer is clicked the next button is disabled. 
+    nextButton.disabled = false;
+
+    });
+}
+/*
+function resetState() {
+  while (answerButtonElement.firstChild){
+    answerButtonElement.removeChild(answerButtonElement.firstChild);
+  }
+}
+
+let correctScore = 0;
+let incorrectScore = 0;
+
+function selectAnswer(addEventListener) {
+  var selctedButton = addEventListener.taget;
+  var correct = selctedButton.dataset.correct;
+  var correctScoreElement = getElementById("correct");
+  var incorrectScoreElement = getElementById("incorrect");
+
+  // if the answer is correct the number will turn green.
+
+  if (correct) {
+    correctScore++;
+    correctScoreElement.style.color = "green";
+    
+    // the color will stay for 2 seconds. 
+    setTimeout(function() {
+      correctScoreElement.style.color = ""; 
+    }, 2000);
+  }
+
+}
 
 
 function resetState(){}
@@ -198,4 +247,4 @@ const questions = [
     ]
   },
 
-];
+];*/
