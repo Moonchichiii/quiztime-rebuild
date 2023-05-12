@@ -49,8 +49,6 @@ var answerButtonElement = document.getElementById("answer-buttons");
 
 
 
-
-
 function startQuiz() {  
 
 // removing the quiz instructions 
@@ -58,14 +56,13 @@ var gameInstructions = document.getElementById("instructions");
 gameInstructions.classList.add("hide");
 
 
-// removing the startbutton 
-startButton.classList.add("hide");  
-
-
 // displaying the question container
 var questionContainer = document.getElementById("question-container");
 questionContainer.classList.remove("hide");
 
+
+// removing the startbutton 
+startButton.classList.add("hide");  
 
 
 // displaying the scoreboard. 
@@ -78,38 +75,26 @@ questionContainer.classList.remove("hide");
 
 
 // displaying the first question from the shuffled list
-shuffleQuestion = questions.sort(function() {
-return Math.random() - 0.5;
-
-});
-
-currentQuestionIndex = 0;
-showQuestion(shuffleQuestion[currentQuestionIndex]);
-
+shuffleQuestion = questions.sort(() => Math.random() - 0.5)
+  currentQuestionIndex = 0;
+  showQuestion(shuffleQuestion[currentQuestionIndex]);
 }
 
-
-/*
-
-
-
-function nextQuestion()
-currentQuestionIndex++;
-if(currentQuestionIndex < shuffleQuestion.length) {
-showQuestion(shuffleQuestion[currentQuestionIndex]);
-else {
-  endQuiz();
+function nextQuestion() {
+  resetState();
+  currentQuestionIndex++;
+  if (currentQuestionIndex < shuffleQuestion.length) {
+    showQuestion(shuffleQuestion[currentQuestionIndex]);
+  } else {
+    endQuiz();
+  }
 }
-
-}*/
-
-
 
   // displays the questions 
-function showQuestion(question) {
-  questionElement.innerText = question.question;
-  question.answers.forEach(function(answer) {
-
+  function showQuestion(question) {
+    questionElement.innerText = question.question;
+    question.answers.forEach(answer => {
+  
   // creates the buttons and adds the answers to the button. 
   var button = document.createElement('button');
   button.innerText = answer.text;
@@ -127,12 +112,19 @@ function showQuestion(question) {
   });
 }
 
-// clearing the answerbuttonElement. 
+// clearing the answerbuttonElement
 function resetState() {
 while (answerButtonElement.firstChild){
   answerButtonElement.removeChild(answerButtonElement.firstChild);
 }
 }
+
+function resetState() {
+  while (answerButtonElement.firstChild) {
+    answerButtonElement.removeChild(answerButtonElement.firstChild);
+  }
+}
+
 
 var correctScore = 0;
 var incorrectScore = 0;
@@ -144,9 +136,9 @@ function selectAnswer(addEventListener) {
 
   var correct = selctedButton.dataset.correct;
 
-  var correctScoreElement = getElementById("correct");
+  var correctScore = document.getElementById("correct");
 
-  var incorrectScoreElement = getElementById("incorrect");
+  var incorrectScore = document.getElementById("incorrect");
 
 // if the answer is correct the number will turn green.
 
@@ -177,20 +169,24 @@ incorrectScoreElement.innerText = incorrectScore;
 setTimeout(nextQuestion, 1500);
 
 
+
 function endQuiz(){
     localStorage.setItem('correctScore', correctScore);
     localStorage.setItem('incorrectScore', incorrectScore);
     window.location.href = "finished.html";
-}
+    
+    if (correctScore === 0 && incorrectScore === 0) {
+      alert("You have not played the game and your score is zero.");
+    } 
+    else {
+    localStorage.setItem('correctScore', correctScore);
+    localStorage.setItem('incorrectScore', incorrectScore);
+    window.location.href = "finished.html";
+    }
+   
+  }
 
-
-function resetState(){}
-
-
-function endQuiz(){}
-
-
-const questions = [
+var questions = [
   {
     question: 'In which city is the famous Edvard Eriksen statue, The Little Mermaid?',
     answers: [
