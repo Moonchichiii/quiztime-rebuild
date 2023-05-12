@@ -142,7 +142,7 @@ footer {
     font-size:1.5rem;
 }
 
-#instructions  {
+#intro  {
     display: flex;
     flex-direction: column;
     justify-content: center;

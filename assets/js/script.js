@@ -23,17 +23,27 @@ function Login() {
   setInterval(function() {
     document.getElementById("time").innerHTML = new Date().toLocaleTimeString();  },  1000);
 
+
+
 // Start button (start quiz)
-
-
 
 
 const startButton = document.getElementById("start-btn");
 startButton.addEventListener('click', startQuiz);
 
 
+// main function to start and hide the intstructions and start button. 
+
+
+
+
+
 function startQuiz() {
-  console.log(startQuiz);
+  
+  var gameInstructions = document.getElementById("intro");
+  gameInstructions.classList.add("hide");
+
+  startButton.classList.add("hide");
 }
 
 
