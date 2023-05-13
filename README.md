@@ -59,6 +59,7 @@ Validation
 ![Alt text](assets/readme-content/validation/Screenshot%202023-05-13%20005851.png)
 </details>
 
+
 <details>
   <summary>Javascript - JShint</summary>
 
