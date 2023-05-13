@@ -1,5 +1,8 @@
 # Quiz Time - rebuild
 ---
+![Alt text](assets/readme-content/Screenshot%202023-05-13%20001752.png)
+![Alt text](assets/readme-content/Screenshot%202023-05-13%20001807.png)
+![Alt text](assets/readme-content/Screenshot%202023-05-13%20002434.png)
 
 ## Project Description
 ---
@@ -35,6 +38,35 @@ Your final score will be displayed at the end, along with an option to retake th
 
 ## Testing 
 ---
+Validation
+
+<details>
+  <summary>HTML Validation - all pages</summary>
+
+  ![Alt text](assets/readme-content/validation/Screenshot%202023-05-13%20010604.png)
+   ![Alt text](assets/readme-content/validation/Screenshot%202023-05-13%20010709.png) 
+   ![Alt text](assets/readme-content/validation/Screenshot%202023-05-13%20010733.png)
+  
+
+</details>
+
+
+<details>
+  <summary>Css Validation - all pages</summary> 
+
+(![Alt text](assets/readme-content/validation/Screenshot%202023-05-13%20005620.png))
+![Alt text](assets/readme-content/validation/Screenshot%202023-05-13%20005700.png)
+![Alt text](assets/readme-content/validation/Screenshot%202023-05-13%20005851.png)
+</details>
+
+<details>
+  <summary>Javascript - JShint</summary>
+
+  ![Alt text](assets/readme-content/validation/Screenshot%202023-05-13%20010820.png)
+  
+
+</details>
+
 
 
 ## Bugs 
