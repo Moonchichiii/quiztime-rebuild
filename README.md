@@ -1,11 +1,15 @@
 # Quiz Time - rebuild
 ---
+<center>
+
 ![Alt text](assets/readme-content/Screenshot%202023-05-13%20001752.png)
 ![Alt text](assets/readme-content/Screenshot%202023-05-13%20001807.png)
 ![Alt text](assets/readme-content/Screenshot%202023-05-13%20002434.png)
 
+</center>
 ## Project Description
 ---
+I wanted to create a very clean and quick quiz, focusing more on the questions and user experience, rather than cluttering it up too much. I will definitely play around, add more features, and change the layout of this project in the future. 
 
 ## Table of Contents
 ---
@@ -13,12 +17,7 @@
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
-- [Bugs](#bugs)
-- [Contributing](#contributing)
 - [Credits](#credits)
-
-
-
 
 
 ## How to Play
@@ -28,6 +27,7 @@ Your final score will be displayed at the end, along with an option to retake th
 
 ## Features 
 ---
+Features a simple sign-in that displays your username with a small welcome message in the header of the quiz page, as well as at the end where your score is presented. During the game, your local time is displayed in the right-hand corner of the header. Social media icons are already included in the footer. In the future, I plan to add a countdown function and enhance the user experience with more small features. There is a lot more that will be added along the way, given more time.
 
 
 ## Technologies Used
@@ -68,15 +68,10 @@ Validation
 </details>
 
 
-
-## Bugs 
----
-
-
 ## Credits 
 ---
 
-Main inspiration for the quiz 
+Main source inspiration for the quiz and also great part of the Javascript Code! 
 - https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLXy0WVQprv4tFVbRmQasmLho4xIY73yvo&index=33
 - https://www.youtube.com/@WebDevSimplified
 
@@ -84,10 +79,12 @@ Main inspiration for the quiz
 - Source of the questions inside the quiz 
 - https://ahaslides.com/blog/funny-pub-quiz-questions/ 
 
-https://www.youtube.com/watch?v=79WRPIknVHs&list=PLXy0WVQprv4tFVbRmQasmLho4xIY73yvo&index=37
 - Main source for the sigin feature, had some issues with it getting to work at first.
+- https://www.youtube.com/watch?v=79WRPIknVHs&list=PLXy0WVQprv4tFVbRmQasmLho4xIY73yvo&index=37
 
 ---
 
 ## Other Sources 
 ---
+- https://www.w3schools.com/js/default.asp
+- https://stackoverflow.com/questions/tagged/javascript
